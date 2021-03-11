@@ -11,6 +11,7 @@
     "test": "polymer test"
   },
   "dependencies": {
+    "@polymer/decorators": "^3.0.0",
     "@polymer/polymer": "^3.4.1",
     "@webcomponents/webcomponentsjs": "^2.5.0"
   },
