@@ -1,11 +1,11 @@
 {
   "name": "polymer3",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "public/index.html",
   "author": "Arthur Falcão <arthurjvfalcao@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "polymer serve",
+    "start": "webpack serve",
     "build": "polymer build",
     "lint": "polymer lint",
     "test": "polymer test"
@@ -15,6 +15,13 @@
     "@webcomponents/webcomponentsjs": "^2.5.0"
   },
   "devDependencies": {
-    "polymer-cli": "^1.9.11"
+    "copy-webpack-plugin": "8.0.0",
+    "html-webpack-plugin": "5.3.1",
+    "polymer-cli": "^1.9.11",
+    "ts-loader": "8.0.17",
+    "typescript": "4.2.3",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "3.11.2"
   }
 }
