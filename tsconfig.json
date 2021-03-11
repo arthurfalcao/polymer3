@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ES2020",
+    "target": "ES5",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
     "outDir": "dist",
     "rootDir": "src",
     "strict": true,
@@ -11,8 +12,9 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["dist"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }
