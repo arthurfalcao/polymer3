@@ -1,7 +1,8 @@
-const path = require('path');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path')
 
-const HtmlPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -9,22 +10,22 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    hot: true,
+    hot: true
   },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    clean: true
   },
   module: {
-    rules: [{ test: /\.ts?$/, use: 'ts-loader' }],
+    rules: [{ test: /\.(ts)?$/, exclude: /node_modules/, use: 'babel-loader' }]
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js']
   },
   plugins: [
     new HtmlPlugin({
-      template: 'public/index.html',
+      template: 'public/index.html'
     }),
     new CopyPlugin({
       patterns: [
@@ -36,9 +37,9 @@ module.exports = {
             ),
             '*.js'
           ),
-          to: 'webcomponentsjs/[name][ext]',
-        },
-      ],
-    }),
-  ],
-};
+          to: 'webcomponentsjs/[name][ext]'
+        }
+      ]
+    })
+  ]
+}
