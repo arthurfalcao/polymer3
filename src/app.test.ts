@@ -1,18 +1,17 @@
-import { fixture } from '@open-wc/testing'
-import { getByRole } from 'testing-library__dom'
+import { render } from './utils/tests/helpers'
 
 import './app'
 
 describe('<polymer3-app />', () => {
   it('should render the heading', async () => {
-    const container = await fixture<HTMLElement>(
+    const { container, getByRole } = await render(
       `<polymer3-app></polymer3-app>`
     )
 
     expect(
-      getByRole(container, 'heading', { name: /polymer3 playground/i })
+      getByRole('heading', { name: /polymer3 playground/i })
     ).toBeInTheDocument()
 
-    expect(container.shadowRoot?.firstElementChild).toMatchSnapshot()
+    expect(container?.firstElementChild).toMatchSnapshot()
   })
 })
