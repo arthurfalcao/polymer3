@@ -3,5 +3,6 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/'],
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts'],
-  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts']
+  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
+  transformIgnorePatterns: []
 }
