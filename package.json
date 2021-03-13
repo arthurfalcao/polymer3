@@ -9,6 +9,7 @@
     "build": "polymer build",
     "lint": "eslint src",
     "test": "jest",
+    "test:watch": "yarn test --watch",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -21,6 +22,9 @@
     "@babel/plugin-proposal-decorators": "^7.13.5",
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-typescript": "^7.13.0",
+    "@open-wc/testing": "^2.5.32",
+    "@testing-library/dom": "^7.30.0",
+    "@testing-library/jest-dom": "^5.11.9",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
@@ -36,6 +40,7 @@
     "lint-staged": "^10.5.4",
     "polymer-cli": "^1.9.11",
     "prettier": "^2.2.1",
+    "testing-library__dom": "^7.29.4-beta.1",
     "typescript": "^4.2.3",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",
