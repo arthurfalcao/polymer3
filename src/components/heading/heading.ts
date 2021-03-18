@@ -1,3 +1,4 @@
+import { property } from '@polymer/decorators'
 import { PolymerElement, html } from '@polymer/polymer'
 import { StampedTemplate } from '@polymer/polymer/interfaces'
 
@@ -11,18 +12,11 @@ type As = keyof Pick<
 >
 
 class Heading extends PolymerElement {
-  static get properties() {
-    return {
-      as: {
-        type: String,
-        value: 'h2'
-      },
-      color: {
-        type: String,
-        value: 'black'
-      }
-    }
-  }
+  @property({ type: String })
+  as: As = 'h2'
+
+  @property({ type: String })
+  color: Color = 'black'
 
   static get template() {
     return html`
@@ -38,8 +32,7 @@ class Heading extends PolymerElement {
    * Generetes the heading tag based on the `as` property
    */
   _attachDom(dom: StampedTemplate | null): ShadowRoot | null {
-    const as = this.get('as') as As
-    const color = this.get('color') as Color
+    const { as, color } = this
 
     if (dom) {
       const slot = dom.querySelector('slot')
