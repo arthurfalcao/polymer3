@@ -18,7 +18,13 @@ module.exports = {
     clean: true
   },
   module: {
-    rules: [{ test: /\.(ts)?$/, exclude: /node_modules/, use: 'babel-loader' }]
+    rules: [
+      {
+        test: /\.(ts)?$/,
+        exclude: /node_modules/,
+        use: [{ loader: 'babel-loader' }, { loader: 'ts-loader' }]
+      }
+    ]
   },
   resolve: {
     extensions: ['.ts', '.js']
