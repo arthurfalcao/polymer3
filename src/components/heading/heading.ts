@@ -34,6 +34,9 @@ class Heading extends PolymerElement {
     `
   }
 
+  /**
+   * Generetes the heading tag based on the `as` property
+   */
   _attachDom(dom: StampedTemplate | null): ShadowRoot | null {
     const as = this.get('as') as As
     const color = this.get('color') as Color
