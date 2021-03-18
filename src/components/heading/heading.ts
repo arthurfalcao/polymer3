@@ -1,6 +1,8 @@
 import { PolymerElement, html } from '@polymer/polymer'
 import { StampedTemplate } from '@polymer/polymer/interfaces'
 
+import styles from './styles'
+
 type Color = 'black' | 'white'
 
 type As = keyof Pick<
@@ -25,18 +27,7 @@ class Heading extends PolymerElement {
   static get template() {
     return html`
       <style>
-        :host {
-          --text-black: #030517;
-          --text-white: #fafafa;
-        }
-
-        .text-black {
-          color: var(--text-black);
-        }
-
-        .text-white {
-          color: var(--text-white);
-        }
+        ${styles}
       </style>
 
       <slot></slot>
