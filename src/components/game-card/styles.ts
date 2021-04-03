@@ -93,10 +93,8 @@ export default htmlLiteral`
     right: 0;
     top: -0.5rem;
     cursor: pointer;
-  }
 
-  .fav-button svg {
-    width: 2.5rem;
+    --iron-icon-width: 2.5rem;
   }
 
   .buy-box {
