@@ -8,16 +8,16 @@ import styles from './styles'
 
 class GameCard extends PolymerElement {
   @property({ type: String })
-  title = ''
+  gTitle?: string
 
   @property({ type: String })
-  developer = ''
+  developer?: string
 
   @property({ type: String })
-  img = ''
+  img?: string
 
   @property({ type: String })
-  price = ''
+  price?: string
 
   @property({ type: String })
   promotionalPrice?: string
@@ -33,12 +33,12 @@ class GameCard extends PolymerElement {
 
       <article class="wrapper">
         <div class="image-box">
-          <img src="[[img]]" alt="[[title]]" />
+          <img src="[[img]]" alt="[[gTitle]]" />
         </div>
 
         <div class="content">
           <div class="info">
-            <h3 class="title">[[title]]</h3>
+            <h3 class="title">[[gTitle]]</h3>
             <h4 class="developer">[[developer]]</h4>
           </div>
 
