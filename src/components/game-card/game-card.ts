@@ -22,6 +22,9 @@ class GameCard extends PolymerElement {
   @property({ type: String })
   promotionalPrice?: string
 
+  @property({ type: Boolean })
+  favorite = false
+
   static get template() {
     return html`
       <style>
@@ -39,11 +42,16 @@ class GameCard extends PolymerElement {
             <h4 class="developer">[[developer]]</h4>
           </div>
 
-          <div class="fav-button" role="button">
-            <iron-icon
-              aria-label="Add to Wishlist"
-              icon="favorite-border"
-            ></iron-icon>
+          <div class="fav-button" role="button" on-click="onFavorite">
+            <template is="dom-if" if="[[favorite]]">
+              <iron-icon aria-label="Remove from Wishlist" icon="favorite">
+              </iron-icon>
+            </template>
+
+            <template is="dom-if" if="[[!favorite]]">
+              <iron-icon aria-label="Add to Wishlist" icon="favorite-border">
+              </iron-icon>
+            </template>
           </div>
 
           <div class="buy-box">
@@ -62,6 +70,12 @@ class GameCard extends PolymerElement {
 
   private getFeaturedPrice(price: string, promotionalPrice?: string): string {
     return promotionalPrice || price
+  }
+
+  private onFavorite() {
+    this.dispatchEvent(
+      new CustomEvent('favorite', { bubbles: true, composed: true })
+    )
   }
 }
 
