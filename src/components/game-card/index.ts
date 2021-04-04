@@ -1,9 +1,9 @@
 import GameCard from './game-card'
 
-customElements.define('p3-game-card', GameCard)
+customElements.define('app-game-card', GameCard)
 
 declare global {
   interface HTMLElementTagNameMap {
-    'p3-game-card': GameCard
+    'app-game-card': GameCard
   }
 }
