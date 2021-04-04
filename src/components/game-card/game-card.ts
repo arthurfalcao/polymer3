@@ -19,6 +19,9 @@ class GameCard extends PolymerElement {
   @property({ type: String })
   price = ''
 
+  @property({ type: String })
+  promotionalPrice?: string
+
   static get template() {
     return html`
       <style>
@@ -44,11 +47,21 @@ class GameCard extends PolymerElement {
           </div>
 
           <div class="buy-box">
-            <div class="price">[[price]]</div>
+            <template is="dom-if" if="[[promotionalPrice]]" restamp>
+              <div class="price is-promotional">[[price]]</div>
+            </template>
+
+            <div class="price">
+              [[getFeaturedPrice(price, promotionalPrice)]]
+            </div>
           </div>
         </div>
       </article>
     `
+  }
+
+  private getFeaturedPrice(price: string, promotionalPrice?: string): string {
+    return promotionalPrice || price
   }
 }
 

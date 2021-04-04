@@ -109,9 +109,18 @@ export default htmlLiteral`
     font-weight: var(--font-bold);
     height: 3rem;
     align-items: center;
+  }
+
+  .price:not(.is-promotional) {
     color: var(--colors-white);
     padding: 0 var(--spacings-xxsmall);
     background-color: var(--colors-secondary);
     border-radius: var(--border-radius);
+  }
+
+  .price.is-promotional {
+    color: var(--colors-gray);
+    text-decoration: line-through;
+    margin-right: var(--spacings-xsmall);
   }
 `
