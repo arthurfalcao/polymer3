@@ -27,9 +27,7 @@ class GameCard extends PolymerElement {
 
   static get template() {
     return html`
-      <style>
-        ${styles}
-      </style>
+      ${styles}
 
       <article class="wrapper">
         <div class="image-box">
