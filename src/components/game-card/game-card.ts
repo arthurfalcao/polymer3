@@ -4,6 +4,8 @@ import { PolymerElement, html } from '@polymer/polymer'
 import '@polymer/iron-icon/iron-icon'
 import '@polymer/iron-icons/iron-icons'
 
+import '../button'
+
 import styles from './styles'
 
 class GameCard extends PolymerElement {
@@ -60,6 +62,10 @@ class GameCard extends PolymerElement {
             <div class="price">
               [[getFeaturedPrice(price, promotionalPrice)]]
             </div>
+
+            <app-button size="small">
+              <iron-icon slot="icon" icon="add-shopping-cart"></iron-icon>
+            </app-button>
           </div>
         </div>
       </article>

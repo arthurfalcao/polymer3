@@ -98,6 +98,7 @@ export default html`
       padding: 0 var(--spacings-xxsmall);
       background-color: var(--colors-secondary);
       border-radius: var(--border-radius);
+      margin-right: calc(var(--spacings-xxsmall) / 2);
     }
 
     .price.is-promotional {
