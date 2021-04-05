@@ -1,6 +1,8 @@
 import { PolymerElement, html } from '@polymer/polymer'
 import { customElement } from '@polymer/decorators'
 
+import './styles/global'
+
 @customElement('polymer3-app')
 class App extends PolymerElement {
   static get template() {
