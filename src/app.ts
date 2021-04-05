@@ -3,7 +3,7 @@ import { customElement } from '@polymer/decorators'
 
 import './styles/global'
 
-@customElement('polymer3-app')
+@customElement('app-shell')
 class App extends PolymerElement {
   static get template() {
     return html` <h1>Polymer3 Playground</h1> `

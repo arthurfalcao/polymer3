@@ -2,9 +2,9 @@ import { render } from './utils/tests/helpers'
 
 import './app'
 
-describe('<polymer3-app />', () => {
+describe('<app-shell />', () => {
   it('should render the heading', () => {
-    const { container, getByRole } = render(`<polymer3-app></polymer3-app>`)
+    const { container, getByRole } = render(`<app-shell></app-shell>`)
 
     expect(
       getByRole('heading', { name: /polymer3 playground/i })

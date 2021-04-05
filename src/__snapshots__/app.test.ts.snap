@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<polymer3-app /> should render the heading 1`] = `
-<polymer3-app>
+exports[`<app-shell /> should render the heading 1`] = `
+<app-shell>
    
   <h1>
     Polymer3 Playground
   </h1>
    
-</polymer3-app>
+</app-shell>
 `

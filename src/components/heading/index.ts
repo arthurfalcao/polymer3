@@ -1,9 +1,9 @@
 import Heading from './heading'
 
-customElements.define('p3-heading', Heading)
+customElements.define('app-heading', Heading)
 
 declare global {
   interface HTMLElementTagNameMap {
-    'p3-heading': Heading
+    'app-heading': Heading
   }
 }
