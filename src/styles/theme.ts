@@ -5,6 +5,8 @@ const theme = document.createElement('dom-module')
 const styles = html`
   <style>
     html {
+      --grid-container: 130rem;
+      --grid-gutter: 3.2rem;
       --border-radius: 0.4rem;
       --colors-primary: #f231a5;
       --colors-secondary: #3cd3c1;
