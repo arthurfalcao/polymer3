@@ -11,4 +11,3 @@ This project was made for a Proof of concept (POC)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
-
