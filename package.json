@@ -18,7 +18,8 @@
     "@polymer/iron-icon": "^3.0.1",
     "@polymer/iron-icons": "^3.0.1",
     "@polymer/polymer": "^3.4.1",
-    "@webcomponents/webcomponentsjs": "^2.5.0"
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "classnames": "^2.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",

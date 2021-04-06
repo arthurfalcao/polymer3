@@ -9,6 +9,7 @@ export default html`
       border: 0;
       border-radius: var(--border-radius);
       color: var(--colors-white);
+      cursor: pointer;
       padding: var(--spacings-xxsmall);
     }
 
