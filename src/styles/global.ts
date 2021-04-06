@@ -1,9 +1,10 @@
 import { html } from '@polymer/polymer'
 import './theme'
+import './shared'
 
 const styles = html`
   <custom-style>
-    <style include="theme">
+    <style include="theme shared">
       html {
         font-size: 62.5%;
       }
