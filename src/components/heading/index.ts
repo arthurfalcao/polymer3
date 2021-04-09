@@ -1,4 +1,4 @@
-import Heading from './heading'
+import Heading from './Heading'
 
 customElements.define('app-heading', Heading)
 

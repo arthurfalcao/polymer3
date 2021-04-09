@@ -1,4 +1,4 @@
-import GameCard from './game-card'
+import GameCard from './GameCard'
 
 customElements.define('app-game-card', GameCard)
 
