@@ -1,4 +1,4 @@
-import Container from './container'
+import Container from './Container'
 
 customElements.define('app-container', Container)
 

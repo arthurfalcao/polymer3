@@ -1,4 +1,4 @@
-import Button from './button'
+import Button from './Button'
 
 customElements.define('app-button', Button)
 
