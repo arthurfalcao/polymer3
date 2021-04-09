@@ -4,7 +4,7 @@ import { PolymerElement, html } from '@polymer/polymer'
 import '@polymer/iron-icon/iron-icon'
 import '@polymer/iron-icons/iron-icons'
 
-import '../button'
+import 'components/button'
 
 import styles from './styles'
 
