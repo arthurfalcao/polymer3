@@ -1,9 +1,9 @@
 import {{ pascalCase name }} from './{{ pascalCase name }}'
 
-customElements.define('app-{{ kebabCase name }}', {{ pascalCase name }})
+customElements.define('{{> tagName }}', {{ pascalCase name }})
 
 declare global {
   interface HTMLElementTagNameMap {
-    'app-{{ kebabCase name }}': {{ pascalCase name }}
+    '{{> tagName }}': {{ pascalCase name }}
   }
 }
