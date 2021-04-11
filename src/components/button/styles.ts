@@ -43,11 +43,11 @@ export default html`
       --iron-icon-width: 1.5rem;
     }
 
-    .has-children.has-icon > span {
+    :host([has-children][has-icon]) > .wrapper > span {
       margin-left: var(--spacings-xxsmall);
     }
 
-    .wrapper:not(.has-children) > span {
+    :host(:not([has-children])) > .wrapper > span {
       display: none;
     }
   </style>

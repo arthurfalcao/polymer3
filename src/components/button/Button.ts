@@ -13,30 +13,17 @@ class Button extends PolymerElement {
   @property({ type: Boolean })
   private fullWidth = false
 
-  @property({ type: Boolean, readOnly: true })
-  private hasIcon = false
-
-  @property({ type: Boolean, readOnly: true })
-  private hasChildren = false
-
   @query('slot[name=icon]')
   private icon?: HTMLSlotElement
 
   @query('slot:not([name]')
-  private bChildren?: HTMLSlotElement
-
-  /**
-   * Polymer method for readOnly property
-   * @link https://polymer-library.polymer-project.org/3.0/docs/devguide/properties#read-only
-   */
-  private _setHasChildren!: (hasIcon: boolean) => void
-  private _setHasIcon!: (hasIcon: boolean) => void
+  private slottedChildren?: HTMLSlotElement
 
   static get template() {
     return html`
       ${styles}
 
-      <button class$="[[btnClass(size, fullWidth, hasChildren, hasIcon)]]">
+      <button class$="[[btnClass(size, fullWidth)]]">
         <slot name="icon"></slot>
 
         <span>
@@ -49,24 +36,17 @@ class Button extends PolymerElement {
   connectedCallback() {
     super.connectedCallback()
 
-    this._setHasChildren(
-      this.bChildren
-        ?.assignedNodes()
-        .some((item) => !!item.textContent?.trim()) || false
-    )
-    this._setHasIcon(!!this.icon?.assignedElements().length)
+    const slottedNodes = this.slottedChildren?.assignedNodes({ flatten: true })
+    const hasChildren = slottedNodes?.some((node) => !!node.textContent?.trim())
+    if (hasChildren) this.setAttribute('has-children', '')
+
+    const hasIcon = this.icon?.assignedElements().length
+    if (hasIcon) this.setAttribute('has-icon', '')
   }
 
-  private btnClass(
-    size: Size,
-    fullWidth: boolean,
-    hasChildren: boolean,
-    hasIcon: boolean
-  ): string {
+  private btnClass(size: Size, fullWidth: boolean): string {
     return classNames('wrapper', `size-${size}`, {
-      'full-width': fullWidth,
-      'has-children': hasChildren,
-      'has-icon': hasIcon
+      'full-width': fullWidth
     })
   }
 }
