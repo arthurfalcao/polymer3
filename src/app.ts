@@ -1,7 +1,9 @@
 import { PolymerElement, html } from '@polymer/polymer'
 import { customElement } from '@polymer/decorators'
 
-import './styles/global'
+import 'styles/global'
+
+import './bootstrap'
 
 @customElement('app-shell')
 class App extends PolymerElement {

@@ -13,7 +13,7 @@ describe('<app-heading />', () => {
   it('should render a black heading by default', () => {
     const { getByRole } = render(`<app-heading>Polymer3</app-heading>`)
     expect(getByRole('heading', { name: /polymer3/i })).toHaveClass(
-      'text-black'
+      'color-black'
     )
   })
 
@@ -22,7 +22,7 @@ describe('<app-heading />', () => {
       `<app-heading color="white">Polymer3</app-heading>`
     )
     expect(getByRole('heading', { name: /polymer3/i })).toHaveClass(
-      'text-white'
+      'color-white'
     )
   })
 

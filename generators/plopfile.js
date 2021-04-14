@@ -1,4 +1,6 @@
 module.exports = (plop) => {
+  plop.setPartial('tagName', 'app-{{kebabCase name}}')
+
   plop.setGenerator('component', {
     description: 'Create a component',
     prompts: [
