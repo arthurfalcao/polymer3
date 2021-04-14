@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client"],
     "module": "ESNext",
     "outDir": "dist",
     "rootDir": "src",
@@ -16,6 +17,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
