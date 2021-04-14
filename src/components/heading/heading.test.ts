@@ -1,4 +1,4 @@
-import { render } from '../../utils/tests/helpers'
+import { render } from 'utils/tests/helpers'
 
 import '.'
 
