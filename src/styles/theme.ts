@@ -9,7 +9,9 @@ const styles = html`
       --grid-gutter: 3.2rem;
       --border-radius: 0.4rem;
       --colors-primary: #f231a5;
+      --colors-primary-darken: #b20b6f;
       --colors-secondary: #3cd3c1;
+      --colors-secondary-darken: #1f8a7d;
       --colors-black: #030517;
       --colors-white: #fafafa;
       --colors-gray: #8f8f8f;
