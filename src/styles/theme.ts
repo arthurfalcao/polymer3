@@ -13,6 +13,7 @@ const styles = html`
       --colors-black: #030517;
       --colors-white: #fafafa;
       --colors-gray: #8f8f8f;
+      --colors-light-gray: #eaeaea;
       --font-light: 300;
       --font-normal: 400;
       --font-bold: 600;
