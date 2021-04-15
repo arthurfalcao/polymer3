@@ -8,6 +8,16 @@ export default html`
       position: relative;
     }
 
+    @media (max-width: 1170px) {
+      app-ribbon::part(wrapper) {
+        right: 0;
+      }
+
+      app-ribbon::part(wrapper)::before {
+        display: none;
+      }
+    }
+
     .image {
       width: 100%;
       height: 23rem;

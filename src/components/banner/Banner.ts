@@ -1,6 +1,9 @@
 import { observe, property } from '@polymer/decorators'
 import { PolymerElement, html } from '@polymer/polymer'
 
+import { RibbonColors, RibbonSizes } from 'components/ribbon'
+import 'components/ribbon'
+
 import styles from './styles'
 
 class Banner extends PolymerElement {
@@ -19,11 +22,26 @@ class Banner extends PolymerElement {
   @property({ type: String })
   buttonLink?: string
 
+  @property({ type: String })
+  ribbon?: string
+
+  @property({ type: String })
+  ribbonColor: RibbonColors = 'primary'
+
+  @property({ type: String })
+  ribbonSize: RibbonSizes = 'normal'
+
   static get template() {
     return html`
       ${styles}
 
       <div class="wrapper">
+        <template is="dom-if" if="[[ribbon]]">
+          <app-ribbon color="[[ribbonColor]]" size="[[ribbonSize]]">
+            [[ribbon]]
+          </app-ribbon>
+        </template>
+
         <div class="image" role="img" aria-label="[[bTitle]]"></div>
 
         <div class="caption">
