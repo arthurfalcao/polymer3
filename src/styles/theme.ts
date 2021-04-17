@@ -36,6 +36,11 @@ const styles = html`
       --spacings-large: 4rem;
       --spacings-xlarge: 4.8rem;
       --spacings-xxlarge: 5.6rem;
+      --layers-base: 10;
+      --layers-menu: 20;
+      --layers-overlay: 30;
+      --layers-modal: 40;
+      --layers-alwaysOnTop: 50;
     }
   </style>
 `
