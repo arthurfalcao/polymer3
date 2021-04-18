@@ -9,8 +9,13 @@ export default html`
       border: 0;
       border-radius: var(--border-radius);
       color: var(--colors-white);
+      font-family: var(--font-family);
       cursor: pointer;
       padding: var(--spacings-xxsmall);
+    }
+
+    .wrapper:hover {
+      background: linear-gradient(180deg, #e35565 0%, #d958a6 50%);
     }
 
     .size-small {

@@ -23,7 +23,7 @@ class Banner extends PolymerElement {
   buttonLink?: string
 
   @property({ type: String })
-  ribbon?: string
+  ribbon: string | null = null
 
   @property({ type: String })
   ribbonColor: RibbonColors = 'primary'
