@@ -104,7 +104,7 @@ export default html`
     .price.is-promotional {
       color: var(--colors-gray);
       text-decoration: line-through;
-      margin-right: var(--spacings-xsmall);
+      margin-right: var(--spacings-xxsmall);
     }
   </style>
 `
