@@ -1,10 +1,13 @@
 import { property } from '@polymer/decorators'
 import { PolymerElement, html } from '@polymer/polymer'
 
+import { RibbonColors, RibbonSizes } from 'components/ribbon'
+
 import '@polymer/iron-icon/iron-icon'
 import '@polymer/iron-icons/iron-icons'
 
 import 'components/button'
+import 'components/ribbon'
 
 import styles from './styles'
 
@@ -27,11 +30,26 @@ class GameCard extends PolymerElement {
   @property({ type: Boolean })
   favorite = false
 
+  @property({ type: String })
+  ribbon: string | null = null
+
+  @property({ type: String })
+  ribbonColor: RibbonColors = 'primary'
+
+  @property({ type: String })
+  ribbonSize: RibbonSizes = 'small'
+
   static get template() {
     return html`
       ${styles}
 
       <article class="wrapper">
+        <template is="dom-if" if="[[ribbon]]">
+          <app-ribbon color="[[ribbonColor]]" size="[[ribbonSize]]">
+            [[ribbon]]
+          </app-ribbon>
+        </template>
+
         <div class="image-box">
           <img src="[[img]]" alt="[[gTitle]]" />
         </div>
