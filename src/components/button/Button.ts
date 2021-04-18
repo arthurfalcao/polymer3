@@ -2,8 +2,6 @@ import { property, query } from '@polymer/decorators'
 import { PolymerElement, html } from '@polymer/polymer'
 import classNames from 'classnames'
 
-import styles from './styles'
-
 type Size = 'small' | 'medium' | 'large'
 
 class Button extends PolymerElement {
@@ -21,7 +19,7 @@ class Button extends PolymerElement {
 
   static get template() {
     return html`
-      ${styles}
+      <style include="app-button-styles"></style>
 
       <button class$="[[btnClass(size, fullWidth)]]">
         <slot name="icon"></slot>
