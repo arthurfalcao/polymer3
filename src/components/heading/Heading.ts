@@ -52,7 +52,7 @@ class Heading extends PolymerElement {
 
       if (slot) heading.appendChild(slot)
 
-      const classes = classNames(`color-${color}`, `size-${size}`, {
+      const classes = classNames('wrapper', `color-${color}`, `size-${size}`, {
         'line-left': lineLeft,
         'line-bottom': lineBottom,
         [`line-color-${lineColor}`]: lineLeft || lineBottom

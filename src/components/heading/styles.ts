@@ -4,6 +4,10 @@ import 'styles/shared'
 
 export default html`
   <style include="shared">
+    .wrapper {
+      text-transform: var(--app-heading-text-transform, none);
+    }
+
     .color-black {
       color: var(--colors-black);
     }
