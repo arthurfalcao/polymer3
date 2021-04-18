@@ -22,7 +22,7 @@ class GameCard extends PolymerElement {
   price?: string
 
   @property({ type: String })
-  promotionalPrice?: string
+  promotionalPrice: string | null = null
 
   @property({ type: Boolean })
   favorite = false
@@ -72,7 +72,10 @@ class GameCard extends PolymerElement {
     `
   }
 
-  private getFeaturedPrice(price: string, promotionalPrice?: string): string {
+  private getFeaturedPrice(
+    price: string,
+    promotionalPrice: string | null
+  ): string {
     return promotionalPrice || price
   }
 

@@ -13,7 +13,7 @@ class Menu extends PolymerElement {
   isOpen = false
 
   @property({ type: String })
-  username = ''
+  username: string | null = null
 
   static get template() {
     return html`
